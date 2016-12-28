@@ -15,12 +15,19 @@ The following extras have been added to this fork -
 
 ### Components
 - Bootstrap Nav
+- [Folkhacks Bootstrap 3 Gravity Forms SCSS](https://github.com/folkhack/bootstrap3_gravity_forms_sass)
 
 ### Functions / Extras
 - Allow SVG uploads
 - Fix Gravity forms tab index conflicts
 - [ACF / Gravity Forms class](https://github.com/stormuk/Gravity-Forms-ACF-Field)
-- Gravity Forms / Bootstrap styles
+-
+
+### Notes
+- The NavWalker class is from  Michael Romero's [Sagextras](https://github.com/storm2k/sagextras) plugin. It supports dropdowns to 1 level deep by default.
+- Be sure to set Gravity Forms CSS to off and output HTML5 to on for the Folkhack form styles to work. 
+- 
+
 
 Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass, that will help you make better themes.
 
