@@ -7,9 +7,24 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "3.3.6"
+    "bootstrap-sass": "3.3.6",
+    "slick-carousel": "^1.6.0",
+    "font-awesome": "^4.7.0",
+    "fitvids": "^1.2.0"
   },
   "overrides": {
+    "slick-carousel": {
+      "main": [
+        "./slick/slick.js",
+        "./slick/slick.css"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "./scss/font-awesome.scss",
+        "./fonts/*"
+      ]
+    },
     "bootstrap-sass": {
       "main": [
         "./assets/stylesheets/_bootstrap.scss",

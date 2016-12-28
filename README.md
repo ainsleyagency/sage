@@ -2,6 +2,26 @@
 [![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
 [![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
 
+Fork of Sage 8.4.2 (Bootstrap 3) with Ainsley specific additions. 
+
+## Extras
+
+The following extras have been added to this fork -
+
+### Bower Packages
+- [FontAwesome](http://fontawesome.io/icons/)
+- [Slick Carousel](https://github.com/kenwheeler/slick/)
+- [FitVids](https://github.com/davatron5000/FitVids.js)
+
+### Components
+- Bootstrap Nav
+
+### Functions / Extras
+- Allow SVG uploads
+- Fix Gravity forms tab index conflicts
+- [ACF / Gravity Forms class](https://github.com/stormuk/Gravity-Forms-ACF-Field)
+- Gravity Forms / Bootstrap styles
+
 Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass, that will help you make better themes.
 
 * Source: [https://github.com/roots/sage](https://github.com/roots/sage)
@@ -16,7 +36,7 @@ Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and B
 | Prerequisite    | How to check | How to install
 | --------------- | ------------ | ------------- |
 | PHP >= 5.4.x    | `php -v`     | [php.net](http://php.net/manual/en/install.php) |
-| Node.js 0.12.x  | `node -v`    | [nodejs.org](http://nodejs.org/) |
+| Node.js 4.5.x  | `node -v`    | [nodejs.org](http://nodejs.org/) |
 | gulp >= 3.8.10  | `gulp -v`    | `npm install -g gulp` |
 | Bower >= 1.3.12 | `bower -v`   | `npm install -g bower` |
 
