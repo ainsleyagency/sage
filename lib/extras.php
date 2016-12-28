@@ -71,3 +71,22 @@ function as_svg_mime_type( $mimes ) {
   return $mimes;
 }
 add_filter( 'upload_mimes', __NAMESPACE__ . '\\as_svg_mime_type' );
+
+/**
+ * Fix Gravity Form Tabindex Conflicts
+ *
+ * @see http://gravitywiz.com/fix-gravity-form-tabindex-conflicts/
+ *
+ * @param $tab_index
+ * @param bool $form
+ *
+ * @return int
+ */
+function gform_tabindexer( $tab_index, $form = false ) {
+  $starting_index = 1000; // if you need a higher tabindex, update this number
+  if ( $form ) {
+    add_filter( 'gform_tabindex_' . $form['id'], __NAMESPACE__ . '\\gform_tabindexer' );
+  }
+  return \GFCommon::$tab_index >= $starting_index ? \GFCommon::$tab_index : $starting_index;
+}
+add_filter( 'gform_tabindex', __NAMESPACE__ . '\\gform_tabindexer', 10, 2 );
