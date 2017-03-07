@@ -1,3 +1,8 @@
+### 8.4.2.1: March 7th, 2017
+* Update gulp-imagemin options ([#1839](https://github.com/roots/sage/pull/1839))
+* Add error handling to `scripts` and `styles` gulp tasks ([#1832](https://github.com/roots/sage/pull/1832))
+* Update dependencies
+
 ### 8.4.2: February 19th, 2016
 * Add Composer vendor directory to gitignore ([#1618](https://github.com/roots/sage/issues/1618))
 * Fix build test by removing trailing space ([#1617](https://github.com/roots/sage/issues/1617))
