@@ -1,3 +1,7 @@
+### 8.4.2.2: March 24th 2017
+* Add ACF conditional check to ACF/Gravity forms class, so theme does not self-destruct if activated before ACF is installed.
+* Remove install with composer instructions from README
+
 ### 8.4.2.1: March 7th, 2017
 * Update gulp-imagemin options ([#1839](https://github.com/roots/sage/pull/1839))
 * Add error handling to `scripts` and `styles` gulp tasks ([#1832](https://github.com/roots/sage/pull/1832))

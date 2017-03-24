@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
 [![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
 
-Fork of Sage 8.4.2 (Bootstrap 3) with Ainsley specific additions. 
+Fork of Sage 8.4.2 (Bootstrap 3) with Ainsley specific additions.
 
 ## Extras
 
@@ -21,13 +21,12 @@ The following extras have been added to this fork -
 - Allow SVG uploads
 - Fix Gravity forms tab index conflicts
 - [ACF / Gravity Forms class](https://github.com/stormuk/Gravity-Forms-ACF-Field)
--
 
 ### Notes
 - The NavWalker class is from  Michael Romero's [Sagextras](https://github.com/storm2k/sagextras) plugin. It supports dropdowns to 1 level deep by default.
-- Be sure to set Gravity Forms CSS to off and output HTML5 to on for the Folkhack form styles to work. 
-- 
+- Be sure to set Gravity Forms CSS to off and output HTML5 to on for the Folkhack form styles to work.
 
+## Sage
 
 Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass, that will help you make better themes.
 
@@ -75,22 +74,6 @@ See a complete working example in the [roots-example-project.com repo](https://g
 ## Theme installation
 
 Bottom line is you want to get the files in this repo into your local development environment. There are many ways to do this, two of which we will cover here.
-
-### via Command-line
-
-If you're already [using Composer to manage WordPress](https://roots.io/using-composer-with-wordpress/), then you might consider using composer's `create-project` command to download Sage.
-
-The example below assumes you're using Bedrock. If you're not, simply change the target path accordingly.
-
-```sh
-composer create-project roots/sage web/app/themes/your-theme-name-here
-```
-
-Then activate the theme via [wp-cli](http://wp-cli.org/commands/theme/activate/).
-
-```sh
-wp theme activate your-theme-name-here
-```
 
 ### via WordPress Admin Panel
 
