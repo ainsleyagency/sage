@@ -365,7 +365,7 @@ $fh_gf_responsive_break_at: $screen-sm-min !default;
 
 	// Hide jQuery UI datepicker
 	.ui-datepicker,
-	.ui-datepicker-trigger { display: none !important; }
+	.ui-datepicker-trigger { display: none; }
 }
 
 
