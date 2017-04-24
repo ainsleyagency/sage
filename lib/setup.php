@@ -105,3 +105,28 @@ function assets() {
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+/**
+ * Add google tag manager to head
+ */
+function tag_manager_head() {
+  if(get_theme_mod('gtm_id') && get_theme_mod('tracking_type') === 'gtm')
+    get_template_part( 'templates/modules/tag-manager', 'head' );
+}
+add_action( 'wp_head', __NAMESPACE__ . '\\tag_manager_head' );
+/**
+ * Add google tag manager to body
+ */
+function tag_manager_body() {
+  if(get_theme_mod('gtm_id') && get_theme_mod('tracking_type') === 'gtm')
+    get_template_part('templates/modules/tag-manager', 'body');
+}
+add_action('get_header', __NAMESPACE__ . '\\tag_manager_body');
+/**
+ * Add google tag manager to body
+ */
+function google_analytics_head() {
+  if(get_theme_mod('ga_id') && get_theme_mod('tracking_type') === 'ga')
+    get_template_part('templates/modules/google-analytics');
+}
+add_action('wp_head', __NAMESPACE__ . '\\google_analytics_head');

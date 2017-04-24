@@ -31,17 +31,18 @@ function ainsley_customize( $wp_customize ) {
   ] );
 
   // Hide Show ACF (if ACF is active)
-  if(class_exists('acf')) :
+  if ( class_exists( 'acf' ) ) :
 
     $wp_customize->add_setting( 'acf_visibility', array(
       'default' => 'show'
     ) );
 
     $wp_customize->add_control( 'acf_visibility', array(
-      'type'    => 'radio',
-      'section' => 'misc_settings',
-      'label'   => __( 'Hide / Show the ACF menu' ),
-      'choices' => array(
+      'type'     => 'radio',
+      'section'  => 'misc_settings',
+      'settings' => 'acf_visibility',
+      'label'    => __( 'Hide / Show the ACF menu' ),
+      'choices'  => array(
         'hide' => __( 'Hide' ),
         'show' => __( 'Show' ),
       ),
@@ -49,8 +50,48 @@ function ainsley_customize( $wp_customize ) {
 
   endif;
 
+  $wp_customize->add_setting( 'tracking_type', array(
+    'default' => 'none'
+  ) );
+
+  $wp_customize->add_control( 'tracking_type', array(
+    'type'     => 'radio',
+    'section'  => 'misc_settings',
+    'settings' => 'tracking_type',
+    'label'    => __( 'Tracking Type' ),
+    'choices'  => array(
+      'none' => __( 'None' ),
+      'gtm'  => __( 'Google Tag Manager' ),
+      'ga'   => __( 'Google Analytics' ),
+    ),
+  ) );
+
+  $wp_customize->add_setting( 'gtm_id', [
+    'default'           => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ] );
+  $wp_customize->add_control( 'gtm_id', [
+    'label'    => __( 'Google Tag Manager ID', 'sage' ),
+    'section'  => 'misc_settings',
+    'settings' => 'gtm_id',
+    'type'     => 'text'
+  ] );
+
+  $wp_customize->add_setting( 'ga_id', [
+    'default'           => '',
+    'sanitize_callback' => 'sanitize_text_field'
+  ] );
+  $wp_customize->add_control( 'ga_id', [
+    'label'    => __( 'Google Analytics ID', 'sage' ),
+    'section'  => 'misc_settings',
+    'settings' => 'ga_id',
+    'type'     => 'text'
+  ] );
+
+
   // end ainsley_customize
 }
+
 add_action( 'customize_register', __NAMESPACE__ . '\\ainsley_customize' );
 
 /**
