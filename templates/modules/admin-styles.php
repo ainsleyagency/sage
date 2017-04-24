@@ -10,4 +10,14 @@
   .acf-postbox.closed h2.hndle {
     background: #dbdbdb;
   }
+  #sub-accordion-section-misc_settings li + li {
+    border-top: 1px solid #ddd;
+  }
+  #sub-accordion-section-misc_settings li:nth-child(2) {
+    border-top: none;
+  }
+  li#customize-control-acf_visibility label {
+    display: inline-block;
+    padding-right: 15px;
+  }
 </style>

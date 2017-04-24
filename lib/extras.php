@@ -36,7 +36,7 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
  * Admin Styles
  *
  * Styles for admin area.
- * Add styles to the admin-styles template. 
+ * Add styles to the admin-styles template.
  */
 function admin_styles() {
 
@@ -47,6 +47,7 @@ function admin_styles() {
   echo $output;
 }
 add_action( 'admin_head', __NAMESPACE__ . '\\admin_styles' );
+add_action( 'customize_controls_print_styles', __NAMESPACE__ . '\\admin_styles' );
 
 /**
  * Add the SVG Mime type to the uploader
