@@ -4,7 +4,7 @@
  * https://github.com/stormuk/Gravity-Forms-ACF-Field
  */
 
-if (class_exists('acf_field')) {
+if (class_exists('acf') && class_exists('gfcommon')) {
 
   class acf_field_gravity_forms extends acf_field {
 
