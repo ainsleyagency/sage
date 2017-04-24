@@ -1,3 +1,11 @@
+### 8.4.2.3: April 24th 2017
+* Add additional ACF/Gravity Forms conditional check to ACF/Gravity forms class, so theme does not throw errors if ACF is activated before Gravity Forms.
+* Move admin styles to dedicated template
+* Extend admin styles to customizer
+* Add misc. section to customizer
+* Add 'hide ACF' option to misc. customize settings
+* Add Analytics options to misc. customizer settings 
+
 ### 8.4.2.2: March 24th 2017
 * Add ACF conditional check to ACF/Gravity forms class, so theme does not self-destruct if activated before ACF is installed.
 * Remove install with composer instructions from README

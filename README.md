@@ -21,6 +21,8 @@ The following extras have been added to this fork -
 - Allow SVG uploads
 - Fix Gravity forms tab index conflicts
 - [ACF / Gravity Forms class](https://github.com/stormuk/Gravity-Forms-ACF-Field)
+- Customize options to hide/show the Advanced Custom Fields admin menu
+- Customize options for Google Tag Manager or Google Analytics
 
 ### Notes
 - The NavWalker class is from  Michael Romero's [Sagextras](https://github.com/storm2k/sagextras) plugin. It supports dropdowns to 1 level deep by default.
