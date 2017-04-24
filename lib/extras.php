@@ -35,21 +35,19 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 /**
  * Admin Styles
  *
- * Helps to visually separate ACF blocks out when there's a lot of them.
+ * Styles for admin area.
+ * Add styles to the admin-styles template.
  */
 function admin_styles() {
-  echo '<style>
-    .acf-postbox h2.hndle {
-      background: #ebebeb;
-      color: #424242;
-      font-size: 21px !important;
-    }
-    .acf-postbox.closed h2.hndle {
-    background: #dbdbdb;
-    }
-  </style>';
+
+  ob_start();
+    include(locate_template('templates/modules/admin-styles.php'));
+  $output = ob_get_clean();
+
+  echo $output;
 }
 add_action( 'admin_head', __NAMESPACE__ . '\\admin_styles' );
+add_action( 'customize_controls_print_styles', __NAMESPACE__ . '\\admin_styles' );
 
 /**
  * Add the SVG Mime type to the uploader
@@ -90,3 +88,19 @@ function gform_tabindexer( $tab_index, $form = false ) {
   return \GFCommon::$tab_index >= $starting_index ? \GFCommon::$tab_index : $starting_index;
 }
 add_filter( 'gform_tabindex', __NAMESPACE__ . '\\gform_tabindexer', 10, 2 );
+
+/**
+ * ACF Admin Access Control
+ *
+ * Hide / Show the ACF menu.
+ *
+ * Hides the ACF menu via a radio button tucked away in customizer.
+ * Out of sight, out of mind.
+ *
+ * @return bool
+ */
+function acf_admin_control() {
+  get_theme_mod('acf_visibility') === 'show' ? $return = true : $return = false;
+  return $return;
+}
+add_filter('acf/settings/show_admin', __NAMESPACE__ . '\\acf_admin_control');
